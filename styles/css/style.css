@@ -15,33 +15,41 @@ body {
   padding: 0.8rem 3rem;
   background-color: #f7287e;
 }
-
 .header h1 {
   font-size: 1.3rem;
   color: #fff;
   font-weight: bold;
 }
 
+.hamberger-menu {
+  display: none;
+  flex-direction: column;
+}
+.hamberger-menu span {
+  display: inline-block;
+  height: 3px;
+  width: 20px;
+  background-color: #fff;
+  margin: 2px;
+  border-radius: 1.5px;
+}
+
 .navbar {
   display: flex;
   align-items: center;
 }
-
 .navbar img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
 }
-
 .navbar nav {
   margin-right: 40px;
 }
-
 .navbar ul {
   display: flex;
   list-style: none;
 }
-
 .navbar a {
   text-decoration: none;
   padding: 8px;
@@ -50,9 +58,102 @@ body {
   color: #fff;
   font-weight: bold;
 }
-
 .navbar a:hover {
   color: rgb(27, 27, 27);
-} 
+}
+
+.main {
+  display: flex;
+  margin: 2rem 3rem;
+}
+.main aside {
+  flex-direction: column;
+  width: 25%;
+  margin-right: 25px;
+  background-color: #fff;
+  height: 400px;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.main aside div {
+  background-color: #f7287e;
+  width: 100%;
+  height: 100px;
+  margin: 10px 10px;
+  line-height: 80px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.main aside a {
+  color: #fff;
+}
+.main main {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  height: 400px;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main main img {
+  width: 100%;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.main main h2 {
+  font-size: 3rem;
+  color: #f7287e;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+.main main p {
+  font-size: 1.5rem;
+  color: rgb(27, 27, 27);
+  font-weight: thin;
+}
+
+@media (max-width: 768px) {
+  .hamberger-menu {
+    display: flex;
+  }
+  .navbar {
+    display: none;
+  }
+  .main {
+    flex-direction: column-reverse;
+    margin: 1rem;
+  }
+  .main main {
+    width: calc(100% - 2rem);
+    height: 300px;
+    margin-bottom: 20px;
+  }
+  .main main h2 {
+    font-size: 2rem;
+  }
+  .main main p {
+    font-size: 1rem;
+  }
+  .main aside {
+    width: calc(100% - 2rem);
+    height: 400px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
