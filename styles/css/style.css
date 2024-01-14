@@ -166,6 +166,40 @@ body {
   font-weight: bold;
 }
 
+footer {
+  display: flex;
+  padding: 2rem 3rem;
+  margin-top: 30px;
+  background-color: #f7287e;
+}
+footer .summary {
+  width: 50%;
+}
+footer .summary p {
+  text-align: justify;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 100;
+}
+footer .links {
+  padding: 0 5rem;
+}
+footer .links ul {
+  list-style: none;
+}
+footer .links a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: inline-block;
+  transition: all 0.15s ease-in;
+}
+footer .links a:hover {
+  color: rgb(27, 27, 27);
+}
+
 @media (max-width: 768px) {
   .hamberger-menu {
     display: flex;
@@ -194,6 +228,17 @@ body {
   }
   .cards {
     grid-template-columns: 1fr;
+  }
+  footer {
+    flex-direction: column;
+  }
+  footer .summary {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  footer .links {
+    width: 100%;
+    padding: 0;
   }
 }
 @media (min-width: 768px) and (max-width: 1200px) {

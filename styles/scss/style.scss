@@ -134,6 +134,38 @@ body{
         }
     }
 }
+footer{
+    display: flex;
+    padding: 2rem 3rem;
+    margin-top: 30px;
+    background-color: $primaryColor;
+
+    .summary{
+        width: 50%;
+        p{
+            text-align: justify;
+            @include textStyle(1.2rem, 100, $secendoryColor);
+        }
+      
+    }
+    .links{
+        padding:0 5rem ;
+        ul{
+            list-style: none;
+
+        }
+        a{
+            text-decoration: none;
+            @include textStyle(1.2rem,  bold, $secendoryColor);
+            margin-bottom: 10px;
+            display: inline-block;
+            transition: all .15s ease-in;
+            &:hover{
+color: $textColor;
+            }
+        }
+    }
+}
 @include media(M){
 
     .hamberger-menu{
@@ -164,6 +196,17 @@ body{
     }
     .cards{
         grid-template-columns: 1fr;
+    }
+    footer{
+        flex-direction: column;
+        .summary{
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        .links{
+            width: 100%;
+            padding: 0;
+        }
     }
 }
 @include media(L){
