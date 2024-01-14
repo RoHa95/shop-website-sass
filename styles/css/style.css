@@ -128,6 +128,44 @@ body {
   font-weight: thin;
 }
 
+.cards {
+  width: calc(100% - 6rem);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 30px;
+  padding: 20px 0;
+}
+
+.card {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  display: block;
+}
+.card img {
+  width: 100%;
+}
+.card .card-content {
+  line-height: 1.5rem;
+  padding: 15px;
+  background-color: #fff;
+}
+.card .card-content p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  color: rgb(27, 27, 27);
+  font-weight: 100;
+}
+.card .card-content span {
+  display: inline-block;
+  margin: 10px 0;
+  font-size: 0.9rem;
+  color: #f7287e;
+  font-weight: bold;
+}
+
 @media (max-width: 768px) {
   .hamberger-menu {
     display: flex;
@@ -153,6 +191,15 @@ body {
   .main aside {
     width: calc(100% - 2rem);
     height: 400px;
+  }
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
   }
 }
 
